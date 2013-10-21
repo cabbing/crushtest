@@ -32,6 +32,9 @@
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery.js"></script>
+	 <!-- GeoComplete -->
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+	<script type="text/javascript" src="js/jquery.geocomplete.js"></script>
     <!-- Load ScrollTo -->
     <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
     <!-- Load LocalScroll -->
@@ -41,7 +44,13 @@
           $(document).ready(function(){
             $("a[rel^='prettyPhoto']").prettyPhoto();
           });
-        </script>
+    </script>
+	<!-- GeoComplete Initialization -->
+	<script type="text/javascript" charset="utf-8">
+	$(function(){
+		$("#place").geocomplete();
+	});
+    </script>
     </head>
     <body>
     <!--******************** NAVBAR ********************-->
@@ -80,7 +89,7 @@
             <div class="span12">
               <h2>Tell us where and when you are landing...</h2>
 			  <form method="post" action="query.php">
-              <input type="text" name="cognome_cabber" placeholder="Where are you cabbing?" class="cform-text" size="20" title="where" autocomplete="off">
+              <input id="place" type="text" name="cognome_cabber" placeholder="Where are you cabbing?" class="cform-text" size="20" title="where" autocomplete="off">
               <input type="submit" value="Search" class="cform-submit">
 			  </form>
             </div>
