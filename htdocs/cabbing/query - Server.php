@@ -1,6 +1,6 @@
 Uso di form HTML (2)
 <html> <body>
-<h3>Cabber selezionati</h3>
+<h3>Cabbers list:</h3>
 <?php
 /* prepara variabili per connessione MySQL */
 
