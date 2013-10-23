@@ -5,6 +5,7 @@ Uso di form HTML (2)
 /* prepara variabili per connessione MySQL */
 
 /* Connessione al server MySQL */
+echo $_POST['cognome_cabber'];
 $con = mysql_connect("localhost", "root") or die("Connessione fallita: " . mysql_error());
 /* Selezione il DB per l’accesso */
 mysql_select_db("a2370352_cabbing") or die("Selezione DB fallita: " . mysql_error());
